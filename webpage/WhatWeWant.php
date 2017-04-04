@@ -4,10 +4,10 @@ session_start();
 $db=mysqli_connect("localhost","root","","authentication");
 if(isset($_POST['register_btn']))
 {
-    $username=mysql_real_escape_string($_POST['username']);
-    $email=mysql_real_escape_string($_POST['email']);
-    $password=mysql_real_escape_string($_POST['password']);
-    $password2=mysql_real_escape_string($_POST['password2']);
+  $username=mysqli_real_escape_string($_POST['username']);
+  $email=mysqli_real_escape_string($_POST['email']);
+  $password=mysqli_real_escape_string($_POST['password']);
+  $password2=mysqli_real_escape_string($_POST['password2']);  
      if($password==$password2)
      {           //Create User
             $password=md5($password); //hash password before storing for security purposes
